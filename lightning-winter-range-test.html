@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>I Drove an F-150 Lightning 320 Miles at −20°F. Here's What the Range Really Did. — HaulWatts</title>
+<meta name="description" content="A real winter road trip in a 2023 F-150 Lightning Lariat Extended Range: Grand Forks to Minneapolis at 20 below. Real range numbers, the heated seat trick, and what EPA ratings don't tell you.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,400..900&family=Newsreader:opsz,wght@6..72,400;6..72,500;6..72,600&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --concrete:#EDEEEA; --paper:#FAFAF8; --graphite:#1E2124;
+    --steel:#5A6B78; --hv:#FF4D00; --hairline:#C9CCC4; --max:760px;
+  }
+  *{margin:0;padding:0;box-sizing:border-box}
+  body{background:var(--concrete);color:var(--graphite);font-family:'Newsreader',Georgia,serif;font-size:1.1rem;line-height:1.72}
+  a{color:inherit}
+  a:focus-visible{outline:3px solid var(--hv);outline-offset:2px;border-radius:2px}
+  .wrap{max-width:var(--max);margin:0 auto;padding:0 24px}
+  .display{font-family:'Archivo',sans-serif;font-variation-settings:'wdth' 114;font-weight:850;letter-spacing:-0.015em;line-height:1.06;text-transform:uppercase}
+  .mono{font-family:'IBM Plex Mono',monospace;font-size:.74rem;letter-spacing:.1em;text-transform:uppercase}
+  header{position:sticky;top:0;z-index:50;background:color-mix(in srgb,var(--concrete) 92%,transparent);backdrop-filter:blur(8px);border-bottom:1px solid var(--hairline)}
+  .nav{max-width:1180px;margin:0 auto;padding:14px 24px;display:flex;align-items:center;justify-content:space-between}
+  .logo{display:flex;align-items:center;gap:10px;text-decoration:none}
+  .logo-plug{width:26px;height:26px;background:var(--hv);border-radius:4px;position:relative;flex:none}
+  .logo-plug::before,.logo-plug::after{content:"";position:absolute;top:-6px;width:4px;height:8px;background:var(--graphite);border-radius:2px}
+  .logo-plug::before{left:6px}.logo-plug::after{right:6px}
+  .logo span{font-family:'Archivo',sans-serif;font-variation-settings:'wdth' 118;font-weight:900;font-size:1.15rem;text-transform:uppercase}
+  .nav a.back{font-family:'IBM Plex Mono',monospace;font-size:.74rem;letter-spacing:.1em;text-transform:uppercase;text-decoration:none}
+  .nav a.back:hover{color:var(--hv)}
+  article{padding:56px 0 24px}
+  .eyebrow{font-family:'IBM Plex Mono',monospace;font-size:.72rem;letter-spacing:.14em;text-transform:uppercase;color:var(--steel)}
+  h1{font-size:clamp(1.9rem,5vw,2.9rem);margin:14px 0 18px}
+  .byline{font-family:'IBM Plex Mono',monospace;font-size:.74rem;letter-spacing:.08em;text-transform:uppercase;color:var(--steel);padding-bottom:24px;border-bottom:1px solid var(--hairline);margin-bottom:30px}
+  .byline b{color:var(--graphite)}
+  p{margin-bottom:20px}
+  h2{font-family:'Archivo',sans-serif;font-variation-settings:'wdth' 110;font-weight:800;font-size:1.35rem;text-transform:uppercase;margin:38px 0 14px;display:flex;align-items:center;gap:12px}
+  h2::before{content:"";width:24px;height:4px;background:var(--hv);border-radius:2px;flex:none}
+  .plate{background:var(--paper);border:1.5px solid var(--graphite);border-radius:6px;box-shadow:5px 5px 0 var(--graphite);padding:20px 22px;font-family:'IBM Plex Mono',monospace;margin:32px 0}
+  .plate .plate-head{display:flex;justify-content:space-between;align-items:center;border-bottom:1px dashed var(--hairline);padding-bottom:10px;margin-bottom:12px}
+  .plate .plate-head b{font-size:.72rem;letter-spacing:.14em;text-transform:uppercase}
+  .plate .rivet{width:8px;height:8px;border:1.5px solid var(--graphite);border-radius:50%}
+  .plate dl{display:grid;grid-template-columns:auto 1fr;gap:7px 18px;font-size:.8rem}
+  .plate dt{color:var(--steel);text-transform:uppercase;letter-spacing:.06em}
+  .plate dd{font-weight:600;text-align:right}
+  .plate .hv-val{color:var(--hv)}
+  .plate-foot{margin-top:14px;padding-top:10px;border-top:1px dashed var(--hairline);font-size:.68rem;color:var(--steel);letter-spacing:.08em;text-transform:uppercase}
+  .callout{background:var(--paper);border-left:4px solid var(--hv);padding:18px 22px;margin:28px 0;border-radius:0 6px 6px 0}
+  .callout p{margin:0;font-size:1.02rem}
+  .author{margin-top:44px;background:var(--paper);border:1px solid var(--hairline);border-radius:6px;padding:22px}
+  .author h3{font-family:'Archivo',sans-serif;font-variation-settings:'wdth' 110;font-weight:800;font-size:.95rem;text-transform:uppercase;margin-bottom:8px}
+  .author p{font-size:.95rem;color:#43474b;margin:0}
+  footer{margin-top:48px;padding:36px 0 52px;border-top:1px solid var(--hairline)}
+  .disclosure{font-size:.86rem;color:var(--steel);line-height:1.6;max-width:78ch}
+  .hv-line{height:4px;background:var(--hv);border-radius:2px;margin-bottom:22px}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="nav">
+    <a class="logo" href="index.html"><span class="logo-plug" aria-hidden="true"></span><span>HaulWatts</span></a>
+    <a class="back" href="index.html">← All field tests</a>
+  </div>
+</header>
+
+<main class="wrap">
+<article>
+  <p class="eyebrow">Field Test · Log 001 · Winter Range</p>
+  <h1 class="display">I drove an F-150 Lightning 320 miles at −20°F. Here's what the range really did.</h1>
+  <p class="byline">By <b>Jonathan</b> · 2023 F-150 Lightning Lariat Extended Range · Owner-purchased · Grand Forks, ND → Minneapolis, MN</p>
+
+  <p>When I lived in Grand Forks, North Dakota, I made the run to Minneapolis in my 2023 F-150 Lightning Lariat Extended Range. If you know that corridor, you know two things about it: it's about 320 miles of I-29 and I-94, and in the dead of winter it will test everything you own. On this trip it was roughly twenty below zero. Actual air temperature, not wind chill.</p>
+
+  <p>Ford rates the Extended Range Lightning at 320 miles. In normal conditions mine indicated somewhere around 290 at a full charge. What negative twenty gave me instead was 180 to 190 miles of real, usable range. That is a loss of roughly 40 percent against the EPA number, and about a third off what the truck normally promised me. No spec sheet, no dealer, and no window sticker prepares you for that math on a morning when you have a flight to catch.</p>
+
+  <div class="plate" role="figure" aria-label="Trip data plate">
+    <div class="plate-head"><span class="rivet" aria-hidden="true"></span><b>Field Data · Log 001</b><span class="rivet" aria-hidden="true"></span></div>
+    <dl>
+      <dt>Vehicle</dt><dd>2023 Lightning Lariat ER</dd>
+      <dt>Route</dt><dd>Grand Forks → MSP, ~320 mi</dd>
+      <dt>Ambient</dt><dd>−20°F / −29°C</dd>
+      <dt>EPA rating</dt><dd>320 mi</dd>
+      <dt>Typical indicated</dt><dd>~290 mi</dd>
+      <dt>Observed cold range</dt><dd class="hv-val">180–190 mi</dd>
+      <dt>Loss vs EPA</dt><dd class="hv-val">~40%</dd>
+      <dt>Implied efficiency</dt><dd class="hv-val">~1.4 mi/kWh</dd>
+    </dl>
+    <div class="plate-foot">Owner-driven · not modeled · heater off for most of the run</div>
+  </div>
+
+  <h2>The math nobody shows you</h2>
+  <p>Here's what those numbers mean in practice. A 320 mile trip with 185 miles of cold range is not one comfortable charging stop. It's multiple stops, because you don't fast charge to 100 percent (charging slows to a crawl past 80 percent, especially in the cold), and you don't run the buffer to zero on a highway where the next exit might be twenty minutes of nothing. The Lightning's 131 kWh usable battery was delivering around 1.4 miles per kilowatt hour. In summer that same pack gets me well over 2. Cold doesn't just shrink the battery's output — the truck also spends energy keeping the pack itself warm.</p>
+
+  <h2>The heated seat trick, and why it actually works</h2>
+  <p>The thing that saved the trip came from an owner forum, not from Ford: turn off the cabin heat, run the heated seats. It sounds like superstition. It's physics. The Lightning's cabin heater is resistive — it draws somewhere in the range of 5 to 7 kilowatts continuously, like running a big space heater off your battery for the whole drive. Heated seats draw about a hundred watts each. That's a fifty-to-one difference. Over a four-plus hour drive, shutting off the cabin heat buys back a serious chunk of range.</p>
+
+  <div class="callout"><p><strong>So that's how I drove to Minneapolis at twenty below:</strong> jacket on, gloves on, seat heater cooking, cabin heat off, watching the range like a hawk. I rolled into the airport with about 10 miles left. On a 320 mile leg, that's arriving with a 3 percent buffer. I don't recommend it. I did it anyway.</p></div>
+
+  <h2>The $50-a-day free charger</h2>
+  <p>One small mercy at the end: the airport parking garage had a free Level 2 charger. One small joke inside the mercy: the garage itself ran about fifty dollars a day. So the electricity was free the way the drinks are free at a casino. Still — plugging in on arrival meant I started the return trip with a full battery instead of hunting for a fast charger with a suitcase in the frunk.</p>
+
+  <h2>The drive home was the same movie</h2>
+  <p>Coming back to Grand Forks meant the same choice: bundle up with the heat off and make the fewest possible stops, or drive warm and add more charging sessions to an already long day. If you run the cabin heat at those temperatures, the stop count climbs past what anyone would call reasonable for a 320 mile drive. I like getting from point A to point B. So the jacket stayed on.</p>
+
+  <h2>What I'd tell a Lightning buyer in the north</h2>
+  <p>The Lightning is a genuinely good truck, and I still own mine — it sits in my Colorado driveway next to a Hummer EV today. But if you live somewhere with real winter, buy it knowing this: the EPA number is a summer number. Plan winter trips around 55 to 60 percent of the rating, precondition while plugged in whenever you can, learn the heated seat trick before you need it, and know exactly where the fast chargers on your route are before the temperature decides for you. The truck will get you there. It just wants you to do the math first — so I did it for you.</p>
+
+  <div class="author">
+    <h3>About the author</h3>
+    <p>Jonathan is a satellite systems engineer and Air Force veteran. His owner-purchased fleet: a 2024 GMC Hummer EV Omega Edition SUV, a 2023 F-150 Lightning Lariat Extended Range, a Tesla Model Y Performance, and a Tesla Model S — daily driven through North Dakota and Colorado winters. Every number on HaulWatts comes from a vehicle he pays for.</p>
+  </div>
+</article>
+</main>
+
+<footer>
+  <div class="wrap">
+    <div class="hv-line"></div>
+    <p class="disclosure"><strong>Affiliate disclosure:</strong> HaulWatts is reader-supported. When you buy through links on this site, we may earn an affiliate commission at no cost to you. Commissions never influence our verdicts. · <a href="index.html">HaulWatts home</a></p>
+  </div>
+</footer>
+
+</body>
+</html>
