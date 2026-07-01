@@ -112,7 +112,13 @@
   @media(max-width:640px){.cards{grid-template-columns:1fr}}
   .card{background:var(--paper);border:1px solid var(--hairline);border-radius:6px;overflow:hidden;display:flex;flex-direction:column;transition:transform .14s ease, box-shadow .14s ease}
   .card:hover{transform:translateY(-4px);box-shadow:0 10px 24px rgba(30,33,36,.1)}
-  .card .thumb{aspect-ratio:16/9;background:linear-gradient(135deg,#d7dad3,#c3c8bf);display:flex;align-items:center;justify-content:center;color:var(--steel);font-family:'IBM Plex Mono',monospace;font-size:.7rem;letter-spacing:.12em;text-transform:uppercase;border-bottom:1px solid var(--hairline)}
+  .card .thumb{aspect-ratio:16/9;background:linear-gradient(135deg,#d7dad3,#c3c8bf);display:flex;align-items:center;justify-content:center;color:var(--steel);font-family:'IBM Plex Mono',monospace;font-size:.7rem;letter-spacing:.12em;text-transform:uppercase;border-bottom:1px solid var(--hairline);overflow:hidden}
+  .card .thumb img{width:100%;height:100%;object-fit:cover;display:block}
+  .fleet-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:16px}
+  @media(max-width:960px){.fleet-grid{grid-template-columns:repeat(2,1fr)}}
+  .fleet-item{background:var(--paper);border:1.5px solid var(--graphite);border-radius:6px;overflow:hidden}
+  .fleet-item img{width:100%;aspect-ratio:4/3;object-fit:cover;display:block;border-bottom:1.5px solid var(--graphite)}
+  .fleet-item figcaption{font-family:'IBM Plex Mono',monospace;font-size:.66rem;letter-spacing:.08em;text-transform:uppercase;padding:10px 12px;color:var(--graphite)}
   .card .body{padding:20px 20px 22px;display:flex;flex-direction:column;gap:10px;flex:1}
   .card h3{font-family:'Archivo',sans-serif;font-variation-settings:'wdth' 106;font-weight:750;font-size:1.12rem;line-height:1.25}
   .card h3 a{text-decoration:none}
@@ -224,7 +230,7 @@
     </div>
     <div class="cards">
       <article class="card">
-        <div class="thumb">Photo · Both trucks, driveway</div>
+        <div class="thumb"><img src="images/hummer-ev-omega-suv.jpg" alt="2024 GMC Hummer EV Omega Edition SUV in the driveway"></div>
         <div class="body">
           <h3><a href="#">Hummer EV Omega SUV vs F-150 Lightning Lariat ER: One Owner, Both Trucks</a></h3>
           <p>We daily-drive both. Same Colorado routes, same driver, metered charging. Range, ride, software, and which one gets picked for the mountain trip.</p>
@@ -232,7 +238,7 @@
         </div>
       </article>
       <article class="card">
-        <div class="thumb">Photo · Lightning, snow</div>
+        <div class="thumb"><img src="images/f150-lightning-lariat-er.jpg" alt="2023 F-150 Lightning Lariat Extended Range"></div>
         <div class="body">
           <h3><a href="lightning-winter-range-test.html">I Drove a Lightning 320 Miles at −20°F. Here's What the Range Really Did.</a></h3>
           <p>Grand Forks to Minneapolis at twenty below: 320 EPA miles became 185 real ones. The heated seat trick that saved the trip, and the math Ford doesn't show you.</p>
@@ -240,7 +246,7 @@
         </div>
       </article>
       <article class="card">
-        <div class="thumb">Photo · 110V outlet, apartment</div>
+        <div class="thumb"><img src="images/f150-lightning-lariat-er.jpg" alt="2023 F-150 Lightning Lariat Extended Range, the truck that lived on a 110V outlet"></div>
         <div class="body">
           <h3><a href="no-home-charger-north-dakota.html">I Owned a Lightning for a Year With No Home Charger. In North Dakota.</a></h3>
           <p>Apartment life on a 110V outlet, a free 60 kW lifeline in Hillsboro, and the NACS adapter that saved every airport run. Worst-case EV ownership, survived.</p>
@@ -271,6 +277,18 @@
           <div class="meta"><span class="tag">Ownership</span><span>15 min read</span></div>
         </div>
       </article>
+    </div>
+  </section>
+
+  <section id="fleet" class="wrap">
+    <div class="sec-head">
+      <h2 class="display">The test fleet</h2>
+    </div>
+    <div class="fleet-grid">
+      <figure class="fleet-item"><img src="images/hummer-ev-omega-suv.jpg" alt="2024 GMC Hummer EV Omega Edition SUV"><figcaption>2024 Hummer EV Omega SUV</figcaption></figure>
+      <figure class="fleet-item"><img src="images/f150-lightning-lariat-er.jpg" alt="2023 Ford F-150 Lightning Lariat Extended Range"><figcaption>2023 Lightning Lariat ER</figcaption></figure>
+      <figure class="fleet-item"><img src="images/tesla-model-y-performance.jpg" alt="2022 Tesla Model Y Performance"><figcaption>2022 Model Y Performance</figcaption></figure>
+      <figure class="fleet-item"><img src="images/tesla-model-s-refresh.jpg" alt="2021 Tesla Model S refresh"><figcaption>2021 Model S Refresh</figcaption></figure>
     </div>
   </section>
 
