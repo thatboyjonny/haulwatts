@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Towing 1,000 Miles in an EV: 14 Charges, 970 kWh, and the Charger That Wouldn't Let Go — HaulWatts</title>
+<meta name="description" content="A real towing road trip from Shenandoah, Texas to Colorado Springs: every charging stop logged, the truth about towing range, and five hours held hostage by a stuck fast-charging connector in Trinidad, Colorado.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,400..900&family=Newsreader:opsz,wght@6..72,400;6..72,500;6..72,600&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --concrete:#EDEEEA; --paper:#FAFAF8; --graphite:#1E2124;
+    --steel:#5A6B78; --hv:#FF4D00; --hairline:#C9CCC4; --max:760px;
+  }
+  *{margin:0;padding:0;box-sizing:border-box}
+  body{background:var(--concrete);color:var(--graphite);font-family:'Newsreader',Georgia,serif;font-size:1.1rem;line-height:1.72}
+  a{color:inherit}
+  a:focus-visible{outline:3px solid var(--hv);outline-offset:2px;border-radius:2px}
+  .wrap{max-width:var(--max);margin:0 auto;padding:0 24px}
+  .display{font-family:'Archivo',sans-serif;font-variation-settings:'wdth' 114;font-weight:850;letter-spacing:-0.015em;line-height:1.06;text-transform:uppercase}
+  header{position:sticky;top:0;z-index:50;background:color-mix(in srgb,var(--concrete) 92%,transparent);backdrop-filter:blur(8px);border-bottom:1px solid var(--hairline)}
+  .nav{max-width:1180px;margin:0 auto;padding:14px 24px;display:flex;align-items:center;justify-content:space-between}
+  .logo{display:flex;align-items:center;gap:10px;text-decoration:none}
+  .logo-plug{width:26px;height:26px;background:var(--hv);border-radius:4px;position:relative;flex:none}
+  .logo-plug::before,.logo-plug::after{content:"";position:absolute;top:-6px;width:4px;height:8px;background:var(--graphite);border-radius:2px}
+  .logo-plug::before{left:6px}.logo-plug::after{right:6px}
+  .logo span{font-family:'Archivo',sans-serif;font-variation-settings:'wdth' 118;font-weight:900;font-size:1.15rem;text-transform:uppercase}
+  .nav a.back{font-family:'IBM Plex Mono',monospace;font-size:.74rem;letter-spacing:.1em;text-transform:uppercase;text-decoration:none}
+  .nav a.back:hover{color:var(--hv)}
+  article{padding:56px 0 24px}
+  .eyebrow{font-family:'IBM Plex Mono',monospace;font-size:.72rem;letter-spacing:.14em;text-transform:uppercase;color:var(--steel)}
+  h1{font-size:clamp(1.9rem,5vw,2.9rem);margin:14px 0 18px}
+  .byline{font-family:'IBM Plex Mono',monospace;font-size:.74rem;letter-spacing:.08em;text-transform:uppercase;color:var(--steel);padding-bottom:24px;border-bottom:1px solid var(--hairline);margin-bottom:30px}
+  .byline b{color:var(--graphite)}
+  p{margin-bottom:20px}
+  h2{font-family:'Archivo',sans-serif;font-variation-settings:'wdth' 110;font-weight:800;font-size:1.35rem;text-transform:uppercase;margin:38px 0 14px;display:flex;align-items:center;gap:12px}
+  h2::before{content:"";width:24px;height:4px;background:var(--hv);border-radius:2px;flex:none}
+  .plate{background:var(--paper);border:1.5px solid var(--graphite);border-radius:6px;box-shadow:5px 5px 0 var(--graphite);padding:20px 22px;font-family:'IBM Plex Mono',monospace;margin:32px 0}
+  .plate .plate-head{display:flex;justify-content:space-between;align-items:center;border-bottom:1px dashed var(--hairline);padding-bottom:10px;margin-bottom:12px}
+  .plate .plate-head b{font-size:.72rem;letter-spacing:.14em;text-transform:uppercase}
+  .plate .rivet{width:8px;height:8px;border:1.5px solid var(--graphite);border-radius:50%}
+  .plate dl{display:grid;grid-template-columns:auto 1fr;gap:7px 18px;font-size:.8rem}
+  .plate dt{color:var(--steel);text-transform:uppercase;letter-spacing:.06em}
+  .plate dd{font-weight:600;text-align:right}
+  .plate .hv-val{color:var(--hv)}
+  .plate-foot{margin-top:14px;padding-top:10px;border-top:1px dashed var(--hairline);font-size:.68rem;color:var(--steel);letter-spacing:.08em;text-transform:uppercase}
+  .callout{background:var(--paper);border-left:4px solid var(--hv);padding:18px 22px;margin:28px 0;border-radius:0 6px 6px 0}
+  .callout p{margin:0;font-size:1.02rem}
+  .chargelog{width:100%;border-collapse:collapse;font-family:'IBM Plex Mono',monospace;font-size:.72rem;margin:28px 0;background:var(--paper);border:1.5px solid var(--graphite)}
+  .chargelog caption{font-family:'IBM Plex Mono',monospace;font-size:.7rem;letter-spacing:.12em;text-transform:uppercase;padding:10px;background:var(--graphite);color:var(--paper)}
+  .chargelog th{background:var(--concrete);text-transform:uppercase;letter-spacing:.06em;font-weight:600;padding:8px 6px;border-bottom:1.5px solid var(--graphite);text-align:left}
+  .chargelog td{padding:7px 6px;border-bottom:1px solid var(--hairline)}
+  .chargelog tr.stuck td{background:#FFE9DF}
+  .chargelog td.num{text-align:right;white-space:nowrap}
+  @media(max-width:640px){.chargelog{font-size:.62rem}}
+  .author{margin-top:44px;background:var(--paper);border:1px solid var(--hairline);border-radius:6px;padding:22px}
+  .author h3{font-family:'Archivo',sans-serif;font-variation-settings:'wdth' 110;font-weight:800;font-size:.95rem;text-transform:uppercase;margin-bottom:8px}
+  .author p{font-size:.95rem;color:#43474b;margin:0}
+  footer{margin-top:48px;padding:36px 0 52px;border-top:1px solid var(--hairline)}
+  .disclosure{font-size:.86rem;color:var(--steel);line-height:1.6;max-width:78ch}
+  .hv-line{height:4px;background:var(--hv);border-radius:2px;margin-bottom:22px}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="nav">
+    <a class="logo" href="index.html"><span class="logo-plug" aria-hidden="true"></span><span>HaulWatts</span></a>
+    <a class="back" href="index.html">← All field tests</a>
+  </div>
+</header>
+
+<main class="wrap">
+<article>
+  <p class="eyebrow">Summer · Log 006 · Towing Road Trip</p>
+  <h1 class="display">Towing 1,000 miles in an EV: 14 charges, 970 kWh, and the charger that wouldn't let go.</h1>
+  <p class="byline">By <b>Jonathan</b> · 2023 F-150 Lightning Lariat ER, trailer in tow · Shenandoah, TX → Colorado Springs, CO · June–July 2026</p>
+
+  <p>This one isn't a memory — I finished this trip hours before writing it up, and every number below comes straight from the charge logs. The mission: Shenandoah, Texas (just north of Houston) to Colorado Springs, roughly a thousand miles, with a trailer on the hitch the whole way. Towing is the EV stress test everyone asks about, so here's the complete, unedited answer: every stop, every kilowatt-hour, and the one charging station that held my truck hostage in the middle of the night.</p>
+
+  <div class="plate" role="figure" aria-label="Trip data plate">
+    <div class="plate-head"><span class="rivet" aria-hidden="true"></span><b>Field Data · Log 006</b><span class="rivet" aria-hidden="true"></span></div>
+    <dl>
+      <dt>Route</dt><dd>Shenandoah, TX → Colorado Springs</dd>
+      <dt>Distance</dt><dd>~1,000 mi, trailer attached</dd>
+      <dt>Charging sessions</dt><dd class="hv-val">14</dd>
+      <dt>Energy delivered</dt><dd class="hv-val">970 kWh</dd>
+      <dt>Time plugged in</dt><dd class="hv-val">10 hr 40 min</dd>
+      <dt>Towing range @ 80%</dt><dd class="hv-val">~160 mi</dd>
+      <dt>Networks used</dt><dd>Tesla · EA · Francis · Flying J</dd>
+      <dt>Hours held hostage</dt><dd class="hv-val">~5 (Trinidad, CO)</dd>
+    </dl>
+    <div class="plate-foot">Every number from actual session logs · June 29 – July 2, 2026</div>
+  </div>
+
+  <h2>The towing math, stated plainly</h2>
+  <p>Hang a trailer on an electric truck and the range math gets simple and brutal: charging to my usual 80 percent bought roughly 160 miles of real towing range — sometimes. That's the working number I planned around, and the session logs back it up: at one overnight 100 percent charge, the truck estimated 174 miles total. Against a 320-mile EPA rating, towing costs you about half, which matches what every honest EV tower will tell you and what no brochure will. In practice that means a charging stop every 100 to 130 miles, which is why a thousand-mile trip produced fourteen sessions and nearly ten and three-quarter hours plugged in.</p>
+
+  <h2>The full charge log</h2>
+  <p>I'm publishing the whole thing because this is the data I wish existed before my first towing trip. Fourteen stops, four different charging networks — the NACS adapter earned its keep again, unlocking Tesla Superchargers (including a Magic Dock site) alongside the CCS networks. Some routes basically require it now, and mixing networks is simply how you tow across the middle of America.</p>
+
+  <table class="chargelog">
+    <caption>Charge Log · Shenandoah TX → Colorado Springs · Trailer Attached</caption>
+    <thead><tr><th>#</th><th>Stop</th><th>Network</th><th class="num">SOC</th><th class="num">kWh</th><th class="num">Time</th></tr></thead>
+    <tbody>
+      <tr><td>1</td><td>Metropark Sq, Shenandoah TX</td><td>Tesla SC</td><td class="num">9→52%</td><td class="num">54.1</td><td class="num">25m</td></tr>
+      <tr><td>2</td><td>Metropark Sq, Shenandoah TX</td><td>Tesla SC</td><td class="num">13→95%</td><td class="num">109.0</td><td class="num">1h19m</td></tr>
+      <tr><td>3</td><td>H-E-B, Bryan TX</td><td>Tesla SC</td><td class="num">56→83%</td><td class="num">38.4</td><td class="num">18m</td></tr>
+      <tr><td>4</td><td>Walmart, Bellmead TX</td><td>EA</td><td class="num">31→90%</td><td class="num">77.3</td><td class="num">42m</td></tr>
+      <tr><td>5</td><td>Presidio Junction, Fort Worth TX</td><td>EA</td><td class="num">42→89%</td><td class="num">61.6</td><td class="num">35m</td></tr>
+      <tr><td>6</td><td>A&W Magic Dock, Davis OK</td><td>Francis</td><td class="num">26→80%</td><td class="num">70.8</td><td class="num">32m</td></tr>
+      <tr><td>7</td><td>Flying J, Sayre OK</td><td>Pilot</td><td class="num">11→100%</td><td class="num">116.6</td><td class="num">2h</td></tr>
+      <tr><td>8</td><td>Love's, Erick OK</td><td>EA</td><td class="num">88→100%</td><td class="num">17.2</td><td class="num">34m</td></tr>
+      <tr><td>9</td><td>Sam's Club, Amarillo TX</td><td>EA</td><td class="num">11→90%</td><td class="num">105.0</td><td class="num">55m</td></tr>
+      <tr><td>10</td><td>Love's, Tucumcari NM</td><td>EA</td><td class="num">19→97%</td><td class="num">102.2</td><td class="num">1h11m</td></tr>
+      <tr><td>11</td><td>Holiday Inn Express, Santa Rosa NM</td><td>Tesla SC</td><td class="num">61→99%</td><td class="num">53.8</td><td class="num">58m</td></tr>
+      <tr><td>12</td><td>Conoco, Wagon Mound NM</td><td>EA</td><td class="num">39→80%</td><td class="num">56.9</td><td class="num">22m</td></tr>
+      <tr class="stuck"><td>13</td><td>Walmart, Trinidad CO ⚠</td><td>EA</td><td class="num">51→80%</td><td class="num">40.4</td><td class="num">20m*</td></tr>
+      <tr><td>14</td><td>Sam's Club, Pueblo CO</td><td>EA</td><td class="num">36→84%</td><td class="num">66.7</td><td class="num">29m</td></tr>
+    </tbody>
+  </table>
+  <p style="font-family:'IBM Plex Mono',monospace;font-size:.7rem;color:var(--steel);margin-top:-16px">*20 minutes charging. Roughly five hours getting the connector out. Story below.</p>
+
+  <p>A few patterns worth pulling out of the table. The overnight legs were the strategy: charging at midnight and 2 AM means empty stalls, full speed, and no waiting behind anyone — when you need fourteen sessions, stall availability becomes trip planning. The Sayre Flying J session tells the towing truth in one line: 11 to 100 percent took two hours, because charging past 80 crawls, but when the next leg needs every mile, you eat the taper. And stop number three is an old friend — an H-E-B with charging, the same grocery-store-charging combo I fell in love with on the <a href="model-y-family-road-trip-pensacola.html" style="color:var(--hv)">Pensacola family trip</a>. Texas keeps proving chargers belong at grocery stores.</p>
+
+  <h2>Trinidad, Colorado: the charger that wouldn't let go</h2>
+  <p>Everything ran smooth — genuinely smooth, fourteen hundred miles of towing smooth — until Trinidad, Colorado, after midnight, at an Electrify America station. The charge itself was fine: 51 to 80 percent, twenty easy minutes. Then I went to unplug, and the connector would not release from the truck. Not stuck like "jiggle it" stuck. Stuck like it lives here now.</p>
+
+  <p>I tried everything in the book and then the whole book again: the manual latch release, restarting the truck, calling the charging network's service line, every sequence and combination I could think of, in a parking lot in the small hours. This went on for roughly five hours. What finally worked, on something like the fourth full attempt at the latch procedure, was the manual release finally letting the latch drop enough to pull the connector free. No tow truck, no locksmith heroics — just stubbornness, repetition, and eventually the latch giving up before I did.</p>
+
+  <div class="callout"><p><strong>Learn the latch release before you need it:</strong> every EV has a manual charge-port release — in the Lightning's case it's reachable from inside the frunk area — and the time to find yours is in your driveway, not at 1 AM in Trinidad. Know where it is, know how it feels when it works, and know that sometimes the fix is the same procedure attempted with more patience than the situation deserves. If I hadn't known the truck had a manual release at all, that five-hour delay becomes a next-day service call.</p></div>
+
+  <h2>The verdict on towing cross-country</h2>
+  <p>Would I tow a thousand miles electric again? I literally just did, and the answer is yes — with eyes open. The real cost isn't range anxiety, it's rhythm: stops every hundred-and-change miles, ten-plus cumulative hours of charging, and a route built around where the plugs are rather than where you'd naturally stop. The adapter that opens Tesla's network makes the whole thing dramatically more workable, the overnight-charging strategy beats fighting for stalls at 5 PM, and the one genuine failure in fourteen sessions wasn't the truck or the battery — it was a latch. The math is honest and the trip is doable. Just pack patience, and know where your manual release lives.</p>
+
+  <div class="author">
+    <h3>About the author</h3>
+    <p>Jonathan is an Air Force veteran and current Turo operator. He owns and daily drives the EVs he writes about.</p>
+  </div>
+</article>
+</main>
+
+<footer>
+  <div class="wrap">
+    <div class="hv-line"></div>
+    <p class="disclosure"><strong>Affiliate disclosure:</strong> HaulWatts is reader-supported. When you buy through links on this site, we may earn an affiliate commission at no cost to you. Commissions never influence our verdicts. · <a href="index.html">HaulWatts home</a></p>
+  </div>
+</footer>
+
+</body>
+</html>
